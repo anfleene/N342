@@ -1,0 +1,58 @@
+body {
+        color: #000000;
+        background: #515151;
+}
+
+body, div, p, a, input, textarea, select {
+        font: 12px/16px "Trebuchet MS", Arial, sans-serif;
+}
+
+a:link, a:visited {
+        color: #5b48b7;
+        text-decoration: underline;
+}
+
+a:link:hover,
+a:visited:hover {
+        color: #52bab1;
+        text-decoration: none;
+}
+
+.header {
+        background:#d2cafe none repeat scroll 0 0;
+        height:60px;
+        text-align:center;
+}
+
+.header h1 {
+        padding: 25px;
+}
+   
+.content {
+        background: #ffffff;
+        width: 100%;
+        text-align: left;
+}
+
+.content p {
+        padding: 5px 25px 0 25px;
+        margin: 0 0 0 0;
+        text-indent: 1em;
+}
+
+.content tr {
+	display: block;
+}
+.error  {
+	background-color: #ff0000;
+
+}
+.ready {
+	background-color: #00CD00;
+}
+.show {
+	display: inline;
+}
+.hide {
+	display: none;
+}
