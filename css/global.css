@@ -1,58 +1,94 @@
 body {
-        color: #000000;
-        background: #515151;
+  color: #000000;
+  background: #515151;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
 }
 
 body, div, p, a, input, textarea, select {
-        font: 12px/16px "Trebuchet MS", Arial, sans-serif;
+  font: 12px/16px "Trebuchet MS", Arial, sans-serif;
 }
 
 a:link, a:visited {
-        color: #5b48b7;
-        text-decoration: underline;
+  color: #5b48b7;
+  text-decoration: underline;
 }
 
 a:link:hover,
 a:visited:hover {
-        color: #52bab1;
-        text-decoration: none;
+  color: #52bab1;
+  text-decoration: none;
 }
 
-.header {
-        background:#d2cafe none repeat scroll 0 0;
-        height:60px;
-        text-align:center;
+#wrapper{
+	margin: auto;
 }
 
-.header h1 {
-        padding: 25px;
+#header {
+	background:#d2cafe;
+	height:60px;
+	text-align:center;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+#header h1 {
+  padding: 25px;
 }
    
-.content {
-        background: #ffffff;
-        width: 100%;
-        text-align: left;
+#content {
+	background: #ffffff;
+	width: 100%;
+  margin: 0 0 0 0;
+	padding: 0 0 0 0;
+  min-height: 400px;
+	text-align: left;
 }
 
-.content p {
-        padding: 5px 25px 0 25px;
-        margin: 0 0 0 0;
-        text-indent: 1em;
+#content p {
+  padding: 5px 25px 0 25px;
+  margin: 0 0 0 0;
+  text-indent: 1em;
 }
 
-.content tr {
+#nav{
+	float: left;
+	min-height: 400px;
+  background: #d2cafe;
+	width: 15%;
+	text-align: left;
+}
+
+#footer{
+	background: #ffffff;
+
+}
+
+fieldset {
+	border: 0px;
+	width: 400px;
+	margin: auto;
+}
+
+label {
+	float: left;
+	clear: left;
+	width: 10em;
+	text-align: right;
+	margin-right: 1em;
+	margin-bottom: 3px;
+	margin-top: 3px;
+}
+
+input{
+	float: left;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+input.button{
+	float: none;
+	clear: both;
 	display: block;
-}
-.error  {
-	background-color: #ff0000;
-
-}
-.ready {
-	background-color: #00CD00;
-}
-.show {
-	display: inline;
-}
-.hide {
-	display: none;
+	margin: auto;
 }
