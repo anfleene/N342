@@ -14,11 +14,9 @@
 			<div id="header">
 				<h1>N342 Index</h1>
 			</div><!--HEADER-->
-			<div id="nav">  
-        <h1>Nav</h1>
+			<div id="nav">
 			</div>
 			<div id="content">
-			  <h1>Look a form!</h1>
         <form action='#' method='post'>
           <fieldset>
             <label for="name">Name:</label>
@@ -31,9 +29,6 @@
           </fieldset>
         </form>
 			</div><!--CONTENT-->
-			<div id="footer">
-			  <h1>Footer</h1>
-			</div><!--FOOTER-->
 		</div><!--WRAPPER-->
 	</body>
 </html>

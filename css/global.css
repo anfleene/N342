@@ -34,6 +34,17 @@ a:visited:hover {
 
 #header h1 {
   padding: 25px;
+	margin-left: 210px;
+}
+
+#content h2{
+	margin: auto;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#content h3{
+	text-align: center;
 }
    
 #content {
@@ -59,15 +70,20 @@ a:visited:hover {
 	text-align: left;
 }
 
-#footer{
-	background: #ffffff;
+#nav ul{
+	list-style: none;
+	margin: auto;
+}
 
+#nav ul li{
+	padding-top: 10px;
 }
 
 fieldset {
 	border: 0px;
-	width: 400px;
-	margin: auto;
+	width: 300px;
+	margin-left: 25px;
+	padding-top: 25px;
 }
 
 label {
@@ -80,10 +96,10 @@ label {
 	margin-top: 3px;
 }
 
-input{
+input, select{
 	float: left;
 	margin-top: 3px;
-	margin-bottom: 3px;
+	margin-bottom: 5px;
 }
 
 input.button{
@@ -91,4 +107,60 @@ input.button{
 	clear: both;
 	display: block;
 	margin: auto;
+	margin-top: 10px;
+}
+
+li span{ 
+	margin-left: 5px;
+}
+
+li span.head_foot{ 
+	margin-left: 0px;
+}
+
+span a:link, 
+span a:visited {
+  color: #CD3700;
+  text-decoration: underline;
+}
+
+span a:link:hover,
+span a:visited:hover {
+  color: #FF6600;
+  text-decoration: none;
+}
+
+pre {
+	padding: 0;
+	margin: 0;
+	background: #f0f0f0;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	line-height: 20px; /*--Height of each line of code--*/
+	width: 100%;
+	overflow: auto; /*--If the Code exceeds the width, a scrolling is available--*/
+	overflow-Y: hidden;  /*--Hides vertical scroll created by IE--*/
+}
+pre code {
+	margin: 0 0 0 40px;  /*--Left Margin--*/
+	padding: 18px 0;
+	display: block;
+}
+
+#eye  img {
+position: absolute; 
+top: 40px; 
+left: 215px; 
+} 
+
+#mouth  img {
+position: absolute; 
+top: 75px; 
+left: 200px; 
+}
+
+#nose  img {
+position: absolute; 
+top: 60px; 
+left: 200px; 
 }
