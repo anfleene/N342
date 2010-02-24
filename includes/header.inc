@@ -31,6 +31,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
         <head>
                 <link href="css/global.css" rel="stylesheet" type="text/css"/>
+                <script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript"></script>
+                <script src="javascripts/gradebook.js" type="text/javascript"></script>
+                
                 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
                 <title>N342</title>
         </head>

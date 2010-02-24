@@ -84,6 +84,7 @@ fieldset {
 	width: 300px;
 	margin-left: 25px;
 	padding-top: 25px;
+	float: left;
 }
 
 label {
@@ -100,6 +101,25 @@ input, select{
 	float: left;
 	margin-top: 3px;
 	margin-bottom: 5px;
+}
+
+input.number{
+	width: 50px;
+	margin-left: 35px;;
+}
+
+th, td{
+	text-align: center;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+th label{
+	text-align: center;
+}
+
+td input, select{
+	margin-top: 5px;
 }
 
 input.button{
@@ -146,6 +166,40 @@ pre code {
 	padding: 18px 0;
 	display: block;
 }
+div#all_grades, div#grade_percents{
+	float: left;
+	clear: right;
+}
+
+dl.results
+{
+	float: left;
+	
+	width: 520px;
+	margin: 1em 0;
+	padding: 0;
+	border-bottom: 1px solid #999;
+}
+
+.results dt
+{
+	clear: left;
+	float: left;
+	width: 200px;
+	margin: 0;
+	padding: 5px;
+	border-top: 1px solid #999;
+	font-weight: bold;
+}
+
+.results dd
+{
+	float: left;
+	width: 300px;
+	margin: 0;
+	padding: 5px;
+	border-top: 1px solid #999;
+}
 
 #eye  img {
 position: absolute; 
@@ -163,4 +217,8 @@ left: 200px;
 position: absolute; 
 top: 60px; 
 left: 200px; 
+}
+
+.error {
+	border: 2px solid #FF0000;
 }
