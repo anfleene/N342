@@ -7,12 +7,17 @@ $(document).ready(function() {
 	});
 	
 	$("input:submit").click(function(){
+		$("#errorFlash").hide();
 		var errorMsg, the_form;
 		the_form = $(this).parents("form");
+		the_form.find("input, select").removeClass("error");
 		errorMsg = validate($(the_form).find("input, select"), "cant be blank", inputNotEmpty);
-		errorMsg += validate($(the_form).find("input.number"), "must be a number", inputMustBeNumeric);
+		errorMsg += validate($(the_form).find("input.number"), "must be a number", inputNumeric);
+		errorMsg += validate($(the_form).find("input.number"), "must be greater than zero", inputGreaterThanZero);
+		errorMsg += validate($(the_form).find("input.number[name=points_earned[]]"), "must be no greater than the points possible", pointsPossGreaterThanPointsEarned);
+		
 		if(errorMsg != ""){
-			$("#errorFlash").html("<p>"+ errorMsg +"</p>").show();
+			$("#errorFlash").html("<ul>"+ errorMsg +"</ul>").fadeIn();
 			return false;	
 		}
 	});
@@ -23,16 +28,16 @@ function validate(inputs, Errormsg, validator){
 	var msg = "";
 	var invalidInputs = Array();
 	$.each($(inputs), function(index, input){
-		if(validator(input)){
+		if(!validator(input)){
 			$(input).addClass("error");
 			invalidInputs.push($(input).attr("name"));
 		}
 	});
-	if(invalidInputs != Array()){
+	if(invalidInputs.length > 0){
 		$.each(invalidInputs, function(index, name){
 			msg += name.replace("[]", "").replace("_", " ") + ", ";
 		});
-		msg = msg.replace(/, $/, " ") + " " + Errormsg +"<br/>";
+		msg = "<li>" + msg.replace(/, $/, " ") + " " + Errormsg +"</li>";
 	}
 	return msg;
 
@@ -40,17 +45,17 @@ function validate(inputs, Errormsg, validator){
 }
 
 function inputNotEmpty(input){
-	  return ($(input).val() == "");
+	  return !($(input).val() == "");
 }
 
-function inputMustBeNumeric(input){
-	return (parseInt($(input).val()) == NaN);
+function inputNumeric(input){
+	return !!parseInt($(input).val());
 }
 
-function inputMustBeGreaterThanZero(input){
-	return (parseInt($(input).val()) <= 0);
+function inputGreaterThanZero(input){
+	return !(parseInt($(input).val()) <= 0);
 }
 
 function pointsPossGreaterThanPointsEarned(input){
-	return (parseInt($(input)) > parseInt($(input).siblings("input[name=points_poss]")));
+	return !(parseInt($(input).siblings("input[name=points_poss[]]").val()) < parseInt($(input).val()));
 }
