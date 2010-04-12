@@ -180,6 +180,19 @@ dl.results
 	padding: 0;
 	border-bottom: 1px solid #999;
 }
+ul.image_list{
+	list-style: none;
+	margin: auto;
+}
+ul.image_list li{
+	float:left;
+	padding-left: 10px;
+	padding-top: 20px;
+}
+
+ul.image_list li a:link{
+  text-decoration: none;
+}
 
 .results dt
 {

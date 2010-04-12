@@ -5,9 +5,13 @@
 ?>
 <div id="content">
   <div id="errorFlash" class="error" style="display:none"></div>
+  <div ="sub_head">
+    <h2>Rock Paper Scissors Lizard Spock</h2>
+    <p><a href="http://www.youtube.com/watch?v=iapcKVn7DdY">Context</a></p>
+  </div>
   <?php
     printForm();
-    $userGuess = filter_input(INPUT_POST, "userGuess");
+    $userGuess = filter_input(INPUT_GET, "userGuess");
     if(isset($userGuess)){
       $compGuess = CompGuess();
       $winner = updateScores($userGuess, $compGuess);
@@ -25,15 +29,15 @@
 // fuction defs
 
 function compGuess(){
-  return rand(0, 2);
+  return rand(0, 4);
 }
 
 function updateScores($userGuess, $compGuess){
-  $beats = array(1,2,0);
+  $beats = array(array(1,4),array(2,3),array(0,4),array(0,2),array(3,1));
   if($userGuess == $compGuess){
     $_SESSION['TIE']++;
     $winner = "Tie";
-  }else if($beats[$userGuess] == $compGuess){
+  }else if(in_array($compGuess, $beats[$userGuess])){
     $_SESSION['LOSS']++;
     $winner = "Computer";
   }else{
@@ -51,7 +55,7 @@ function percent($key){
 }
 
 function printResults($human, $comp, $winner ){
-  $guessName = array("Rock", "Paper", "Scissors")
+  $guessName = array("Rock", "Paper", "Scissors", "Lizard", "Spock")
 ?>
   <div>
    <dl class="results">
@@ -75,23 +79,13 @@ function printResults($human, $comp, $winner ){
 <?}
 function printForm(){?>
   <div class="update">
-    <form action = "rock_paper_scissors.php" method ="post">
-      <fieldset>
-      <button type = "submit"
-              name = "userGuess"
-              value = "0">rock</button>
-
-      <button type = "submit"
-              name = "userGuess"
-              value = "1">paper</button>
-
-      <button type = "submit"
-              name = "userGuess"
-              value = "2">scissors</button>
-
-      <p><a href="session_reset.php" class="reset"><button type="button">Reset</button></a></p>
-      </fieldset>
-    </form>
+    <ul class="image_list">
+      <li><a href="?userGuess=0"><img src="images/rock.jpg" alt="rock" /></a></li>
+      <li><a href="?userGuess=1"><img src="images/paper.jpg" alt="paper" /></a></li>
+      <li><a href="?userGuess=2"><img src="images/scissors.jpg" alt="scissors" /></a></li>
+      <li><a href="?userGuess=3"><img src="images/lizard.jpg" alt="lizard" /></a></li>
+      <li><a href="?userGuess=4"><img src="images/spock.jpg" alt="spock" /></a></li>
+    </ul>
   </div>
 <?}
 ?>
