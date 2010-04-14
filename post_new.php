@@ -14,12 +14,12 @@
 <?
 function printForm(){ ?>
 <div class="update">
-  <form action="create_blog.php" method="post">
+  <form action="post_create.php" method="post">
     <fieldset>
       <label for="title">Title:</label>
       <input type="text" name="title" />
-      <label for="post">Post:</label>
-      <textarea type="text" name="post"></textarea>
+      <label for="content">Post:</label>
+      <textarea type="text" name="content"></textarea>
       <input type="submit" value="Submit" class="button" />
     </fieldset>
   </form>

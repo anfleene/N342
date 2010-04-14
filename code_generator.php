@@ -3,6 +3,7 @@
 ?>
   <?php
     $code = filter_input(INPUT_GET, "file");
+    error_reporting(0);
   ?>
 <div id="content">
   <pre><code>

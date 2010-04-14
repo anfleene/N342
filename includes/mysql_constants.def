@@ -1,0 +1,6 @@
+<?php
+  define("USER",     "root");
+  define("PASSWORD",    "");
+  define("DB", "n342");
+  define("DBHOST", "342.local");
+?>
