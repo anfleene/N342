@@ -50,7 +50,7 @@ function postsTable($posts){?>
 function postRow($post){?>
   <tr>
     <td><?= $post['title']?></td>
-    <td><?= substr($post['content'],0, 32)?>...<a href="post_show.php?id=<?=$post['id']?>">[more]</a></td>
+    <td><?= substr($post['body'],0, 32)?>...<a href="post_show.php?id=<?=$post['id']?>">[more]</a></td>
   </tr>
   
 <?}

@@ -2,7 +2,7 @@
 //get input
   if(filter_input_array(INPUT_POST)){
    $title = filter_input(INPUT_POST, "title");
-   $content = filter_input(INPUT_POST, "content");
+   $content = filter_input(INPUT_POST, "body");
 //create a post
    $post_id = create_post($title, $content);
 //if the create returns an id redirect to the show method 
@@ -18,9 +18,11 @@ function create_post($title, $content){
   include "includes/db_con.inc";
   $conn = conDB();
   //build an insert query
-  $query = sprintf("INSERT INTO posts (title, content) VALUES('%s', '%s') ",
+  $query = sprintf("INSERT INTO posts (title, body, created, modified) VALUES('%s', '%s', '%s', '%s') ",
               mysql_real_escape_string($title),
-              mysql_real_escape_string($content));
+              mysql_real_escape_string($content),
+              date("Y-m-d H:i:s"),
+              date("Y-m-d H:i:s"));
   q($query);
   //select the most recently created post
   $result = q("SELECT id FROM posts ORDER BY posts.id DESC LIMIT 1");

@@ -351,6 +351,21 @@ div.actions ul li a:hover {
 	text-decoration: underline;
 }
 
+div.comment{
+	margin: 25px 25px 25px 25px;
+	border-width: 1px;
+	border-color: #003d4c;
+	border-style: solid;
+}
+
+div.comment p.date{
+	padding: 2px 2px 2px 2px;
+}
+
+div.comment p.body{
+	border: none;
+	padding: 10px 10px 10px 25px;
+}
 
 input[type=submit],
 div.actions ul li a,

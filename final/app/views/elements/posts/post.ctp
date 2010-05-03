@@ -16,7 +16,7 @@
   </div>
   <div class='actions'>  
     <ul>
-      <? if(isset($comments) || ($post['comment_size'] < 1)){?>
+      <? if(!isset($post['comment_size']) || ($post['comment_size'] < 1)){?>
         <li><?= $html->link('Add A Comment',array('controller' => 'comments', 'action' => 'add', 'post_id' => $post['id']), array('class' => 'comment_add')) ?></li>
       <?}else{?>
         <li><?= $html->link('View '.$post['comment_size'].' Comments', array('action' => 'view', $post['id']))?></li>

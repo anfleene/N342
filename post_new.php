@@ -21,8 +21,8 @@ function printForm(){ ?>
     <fieldset>
       <label for="title">Title:</label>
       <input type="text" name="title" />
-      <label for="content">Post:</label>
-      <textarea type="text" name="content"></textarea>
+      <label for="body">Post:</label>
+      <textarea type="text" name="body"></textarea>
       <input type="submit" value="Submit" class="button" />
     </fieldset>
   </form>

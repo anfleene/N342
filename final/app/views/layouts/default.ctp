@@ -21,11 +21,11 @@
         <div id="body">
           <?= $content_for_layout ?> 
         </div>
-        <div id="cloud">
           <?if(isset($tag_cloud)){?>
-            <?=$this->element("tags/cloud", array('cloud' => $tag_cloud))?>
+            <div id="cloud">
+              <?=$this->element("tags/cloud", array('cloud' => $tag_cloud))?>
+            </div>
           <?}?>
-        </div>
       </div>
       <div id="footer">
         <h1><a href='http://github.com/anfleene/N342/tree/master/final/app'>Final Cakephp Sorce</a></h1>

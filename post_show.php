@@ -15,7 +15,7 @@
     <li><a href="post_new.php">New Post</a></li>
   </ul>
   <?php
-    print_post($post['title'], $post['content']);
+    print_post($post['title'], $post['body']);
   ?>
 </div>
 <?php
@@ -23,10 +23,10 @@
 ?>
 
 <?
-function print_post($title, $content){ ?>
+function print_post($title, $body){ ?>
 <div class="blog">
   <h2><?=$title?></h3>
-  <p><?=$content?></p>
+  <p><?=$body?></p>
   <p><?=$status?></p>
 </div>
 <?}

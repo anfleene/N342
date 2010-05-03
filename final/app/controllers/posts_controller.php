@@ -29,7 +29,6 @@
     
     function add() {
       if (!empty($this->data)) { 
-        $this->data['Post']['tags'] = array("blargity", "honkity");
         if ($this->Post->save($this->data)) {
           $this->Session->setFlash('Your post has been saved.');
           $this->redirect(array('action' => 'index'));
