@@ -16,5 +16,5 @@ $(document).ready(function(){
 		return false;
 	});
 	
-	$('ul#tag_cloud').tagcloud({type:"sphere"});
+	$('ul#tag_cloud').tagcloud({type:"sphere", height:400});
 });
