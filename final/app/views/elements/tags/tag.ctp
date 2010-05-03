@@ -1,0 +1,1 @@
+<li><?= $html->link($tag['name'], array('controller' => 'posts', 'action' => 'index', '?tag='.$tag['name']))?></li>

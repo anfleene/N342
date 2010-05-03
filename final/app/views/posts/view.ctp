@@ -1,0 +1,1 @@
+<?= $this->element("posts/post", array('post' => $post['Post'], 'comments' => $post['Comment'], 'tags' => $post['Tag']))?>
