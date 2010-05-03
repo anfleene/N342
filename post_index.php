@@ -1,10 +1,16 @@
 <?php
+//this script will display all the current posts in the database
   $posts = all_posts();
+  //shut up warnings
   error_reporting(0);
   include "includes/header.inc";
 ?>
 <div id="content">
+  <ul id="subnav">
+    <li><a href="post_new.php">New Post</a></li>
+  </ul>
   <?php
+  //build a table of all the posts
     postsTable($posts)
   ?>
 </div>
@@ -13,7 +19,7 @@
 ?>
 
 <?
-
+//this function finds all the posts in the database
 function all_posts(){
   include "includes/db_con.inc";
   $conn = conDB();
@@ -21,7 +27,7 @@ function all_posts(){
   $posts = q($query);
   return $posts;
 }
-
+//this function 
 function postsTable($posts){?>
     <div id="posts">
       <table>

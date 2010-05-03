@@ -194,6 +194,11 @@ ul.image_list li a:link{
   text-decoration: none;
 }
 
+ul#subnav {
+	margin: 0; padding: 0;
+	float: left;
+	list-style: none;
+}
 .results dt
 {
 	clear: left;

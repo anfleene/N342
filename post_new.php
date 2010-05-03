@@ -3,6 +3,9 @@
   include "includes/header.inc";
 ?>
 <div id="content">
+  <ul id="subnav">
+    <li><a href="post_index.php">Post Index</a></li>
+  </ul>
     <?php
       printForm();
     ?>

@@ -10,6 +10,10 @@
   include "includes/header.inc";
 ?>
 <div id="content">
+  <ul id="subnav">
+    <li><a href="post_index.php">Post Index</a></li>
+    <li><a href="post_new.php">New Post</a></li>
+  </ul>
   <?php
     print_post($post['title'], $post['content']);
   ?>
