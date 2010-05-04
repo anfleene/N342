@@ -21,6 +21,7 @@
         <div id="body">
           <?= $content_for_layout ?> 
         </div>
+        <?//insert the tag cloud on the lefthand side if the var is set?>
           <?if(isset($tag_cloud)){?>
             <div id="cloud">
               <?=$this->element("tags/cloud", array('cloud' => $tag_cloud))?>
@@ -28,6 +29,7 @@
           <?}?>
       </div>
       <div id="footer">
+        <?//link to the source of the project on github?>
         <h1><a href='http://github.com/anfleene/N342/tree/master/final/app'>Final Cakephp Sorce</a></h1>
       </div>
     </div>

@@ -1,3 +1,4 @@
+<?//build a tag cloud ul based on the passed tags?>
 <ul id="tag_cloud">
   <h1>Currently Used Tags</h1>
   <? foreach ($cloud as $tag): ?>

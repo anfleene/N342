@@ -1,4 +1,4 @@
-<!-- File: /app/views/posts/index.ctp -->
+<?//render all of the posts that have been passed to the view?>
 <h1>Blog posts</h1>
 <div class='actions'>
   <h3><?= $html->link('Add Post',array('controller' => 'posts', 'action' => 'add'))?></h3>

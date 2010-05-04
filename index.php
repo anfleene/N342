@@ -10,6 +10,7 @@
         <h3><a href="rock_paper_scissors.php">Rock-Paper-Scissors Lab-Boring Version</a></h3>
         <h3><a href="rpsls.php">Rock-Paper-Scissors Funny Version</a></h3>
         <h3><a href="post_index.php">A simple CRUD Blog minus an Edit because I'm lazy</a></h3>
+        <h3><a href="final/app/webroot/index.php/posts">Final Project(Extended Blog Engine)</a></h3>
       </div> 
     </div>
   </div>

@@ -32,14 +32,17 @@
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 	
+	//any controller can be a sub resource of posts (this is used to attach comments to posts)
 	Router::connect('/posts/:post_id/:controller/:action/:id', array('id' => '[0-9]+'));
 	Router::connect('/posts/:post_id/:controller/:action');
   
+  //this is  genric rout that allows for shorter, prettier routes
   Router::connect(
           '/:controller/:id',
           array('action' => 'view'),
           array('id' => '[0-9]+')
   );
+  //this is the standard basic route 
   Router::connect(
           '/:controller/:action/:id',
           array('id' => '[0-9]+')
